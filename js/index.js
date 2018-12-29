@@ -48,7 +48,7 @@
               var cur_pos = $(this).scrollTop();
 
               sections.each(function() {
-                var top = $(this).offset().top - 80 - nav_height,
+                var top = $(this).offset().top - 100 - nav_height,
                     bottom = top + $(this).outerHeight();
 
                 if (cur_pos >= top && cur_pos <= bottom) {
@@ -83,6 +83,33 @@
                 var msg = $(this).val();
                 SiteModule.toggleButtonState(msg.length > 20);
             });
+        },
+
+        InputStyle: function(){
+            $('input').blur(function() {
+                var $this = $(this);
+                if ($this.val())
+                    $this.addClass('used');
+                else
+                    $this.removeClass('used');
+            });
+
+            var $ripples = $('.ripples');
+            $ripples.on('click.Ripples', function(e) {
+                var $this = $(this);
+                var $offset = $this.parent().offset();
+                var $circle = $this.find('.ripplesCircle');
+
+                var x = e.pageX - $offset.left;
+                var y = e.pageY - $offset.top;
+
+                $circle.css({
+                    top: y + 'px',
+                    left: x + 'px'
+                });
+                $this.addClass('is-active');
+            });
+
         },
 
         initSendMessage: function() {
