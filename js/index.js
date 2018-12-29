@@ -4,40 +4,35 @@
         anchorScrollOffset: 100,
         desktopMinWidth: 500,
         animateDurationMs: 500,
+        navUl: $('nav ul'),
+        menuTr: $('.menu-trigger'),
 
         toggleMenuMobile: function(){
-            $('.menu-trigger').click(function() {
-                $('nav ul').slideToggle(SiteModule.animateDurationMs);
+            SiteModule.menuTr.click(function() {
+                SiteModule.navUl.slideToggle(SiteModule.animateDurationMs);
+                if (!SiteModule.menuTr.hasClass('cross'))
+                    SiteModule.menuTr.addClass('cross');
+                else
+                    SiteModule.menuTr.removeClass('cross');
             });
 
             $(window).resize(function() {
                 if ($(window).width() > SiteModule.desktopMinWidth) {
-                    $('nav ul').removeAttr('style');
-                    $('.menu-trigger').removeClass('cross');
+                    SiteModule.navUl.removeAttr('style');
+                    SiteModule.menuTr.removeClass('cross');
                 }
-            });
-
-            $('.menu-trigger').click(function() {
-                if (!$('.menu-trigger').hasClass('cross'))
-                    $('.menu-trigger').addClass('cross');
-                else
-                    $('.menu-trigger').removeClass('cross');
             });
         },
 
         scrollNav: function() {
             $('#navigation-menu a').click(function() {
-                //Toggle Class
                 $("#navigation-menu a.active").removeClass("active");
-                //var theClass = $(this).attr("class");
-                //$('.' + theClass).parent('a').addClass('active');
                 $(this).addClass('active');
-                //Animate
                 $('html, body').stop().animate({
                     scrollTop: $($(this).attr('href')).offset().top - SiteModule.anchorScrollOffset
                 }, SiteModule.animateDurationMs);
-                $('.menu-trigger').removeClass('cross');
-                if ($('.menu-trigger').css('display') === 'block')
+                SiteModule.menuTr.removeClass('cross');
+                if (SiteModule.menuTr.css('display') === 'block')
                     $('#items').slideUp(SiteModule.animateDurationMs);
                 return false;
             });
