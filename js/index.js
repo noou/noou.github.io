@@ -81,7 +81,7 @@
         canSendMessage: function(){
             $('#message').keyup(function(){
                 var msg = $(this).val();
-                SiteModule.toggleButtonState(msg.length > 20);
+                SiteModule.toggleButtonState(msg.length > 2);
             });
         },
 
@@ -132,40 +132,8 @@
       SiteModule.scrollNav();
       SiteModule.markActiveAnchor();
       SiteModule.canSendMessage();
+      SiteModule.InputStyle();
       SiteModule.initSendMessage();
     });
 
 }(jQuery));
-
-// ---------------------------------------------------
-$(window, document, undefined).ready(function() {
-
-    $('input').blur(function() {
-        var $this = $(this);
-        if ($this.val())
-            $this.addClass('used');
-        else
-            $this.removeClass('used');
-    });
-
-    var $ripples = $('.ripples');
-
-    $ripples.on('click.Ripples', function(e) {
-
-        var $this = $(this);
-        var $offset = $this.parent().offset();
-        var $circle = $this.find('.ripplesCircle');
-
-        var x = e.pageX - $offset.left;
-        var y = e.pageY - $offset.top;
-
-        $circle.css({
-            top: y + 'px',
-            left: x + 'px'
-        });
-
-        $this.addClass('is-active');
-
-    });
-});
-// ---------------------------------------------------
