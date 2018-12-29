@@ -16,8 +16,8 @@
     <header>
         <nav id="navigation-menu" class="nav">
             <div class="menu-trigger"><span></span></div>
-            <ul id="items">
-                <li><a href="#block1">block1</a></li>
+            <ul id="items" class="top-menu">
+                <li><a class="active" href="#block1">block1</a></li>
                 <li><a href="#block2">block2</a></li>
                 <li><a href="#block3">block3</a></li>
                 <li><a href="#block4">block4</a></li>
@@ -48,7 +48,7 @@
         </article> -->
 
 
-        <article id="block1" class="module-block">
+        <section id="block1" class="module-block">
             <h2 class="Posthead">
                 <svg viewBox="0 0 129 129">
                     <path d="m64.5,122.6c32,0 58-26 58-58s-26-58-58-58-58.1,26-58.1,58 26.1,58 58.1,58zm0-108c27.5,5.32907e-15 49.9,22.4 49.9,49.9s-22.4,49.9-49.9,49.9-49.9-22.4-49.9-49.9 22.4-49.9 49.9-49.9z"></path>
@@ -70,7 +70,7 @@
                     <li><a href="#">Link 3</a></li>
                 </ul>
             </div>
-        </article>
+        </section>
 
         <section id="block2" class="module-block">
 
@@ -259,10 +259,10 @@
                             <label>Email \ Name</label>
                         </div>
                         <div class="group">
-                            <textarea rows="5 " id="message" onkeyup="check();" value="Message" class="input" required></textarea>
+                            <textarea rows="5 " id="message" value="Message" class="input" required></textarea>
                             <label for="message"></label>
                         </div>
-                        <button onclick=sendmessage() id="button" class="global-button" disabled="disabled"> send</button>
+                        <button id="button" class="global-button" disabled="disabled"> send</button>
                     </form>
                 </div>
 
@@ -328,6 +328,7 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
     <script src="js/index.js"></script>
+    <script src="js/index0.js"></script>
     <script src="js/particle.js"></script>
 
 </body>
