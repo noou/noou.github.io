@@ -686,7 +686,6 @@ footer p {
   margin: 3px;
 }
 
-
 .icon {
   fill: var(--color3);
 }
@@ -890,6 +889,19 @@ footer p {
 
   .social a {
     font-size: .9em;
+  }
+
+  a.active {
+    background: var(--color6);
+    border: none;
+  }
+
+  a:hover {
+    color: var(--color2);
+  }
+
+  a.active:hover {
+    color: var(--color4);
   }
 }
 
