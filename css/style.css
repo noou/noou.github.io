@@ -120,6 +120,7 @@ header nav a {
 
 header nav a:hover {
   font-weight: bold;
+  background: var(--color6);
 }
 
 a.active {
@@ -914,4 +915,10 @@ footer p {
   #block4 svg {
     width: 90%;
   }
+  #block1 {
+    padding: 0;
+}
+#block1 h2{
+  padding-left: 15%;
+}
 }
