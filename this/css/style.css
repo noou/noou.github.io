@@ -139,8 +139,7 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background: url("https://1.bp.blogspot.com/-i3JId-IqdwQ/T2wBJRQpmwI/AAAAAAAAETc/RE7Xj6KyOpg/s1600/free%2Bdigital%2Bstamp_cute%2Bbird.png") no-repeat center;
-  background-size: cover;
+  fill: var(--color3);
 }
 
 .down-arrow {
