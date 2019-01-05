@@ -129,6 +129,7 @@
       SiteModule.toggleMenuMobile();
       SiteModule.scrollNav();
       SiteModule.markActiveAnchor();
+      SiteModule.renderSkillBars();
       SiteModule.canSendMessage();
       SiteModule.InputStyle();
       SiteModule.initSendMessage();
