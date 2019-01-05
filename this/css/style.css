@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,600,800");
+
+:root {
+  --color1: #30353d;
+  --color2: #323840;
+  --color3: DodgerBlue;
+  --color4: tomato;
+  --color5: Gainsboro;
+
+  --color6: rgba(255, 255, 255, 0.1);
+  --color7: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  transition: 0.4s ease;
+}
+body {
+  background-color: var(--color1);
+  color: var(--color5);
+}
+.rela-block {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.content-container {
+  width: 85%;
+  max-width: 1400px;
+  min-width: 320px;
+  margin: 80px auto;
+  background-color: var(--color2);
+  box-shadow: 8px 8px 20px 5px var(--color7);
+  font-family: "Raleway";
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 4px;
+}
+.top-section {
+  height: 700px;
+}
+
+.nav-bar {
+  position: absolute;
+  width: 100%;
+  max-width: 1250px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  overflow: hidden;
+}
+.logo {
+  display: inline-block;
+  position: absolute;
+  text-transform: uppercase;
+  width: 100%;
+  max-width: 270px;
+  font-size: 50px;
+  line-height: 68px;
+  top: 35px;
+  left: 70px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  transition: 0.3s ease, left 0.4s ease;
+  z-index: 10;
+ text-shadow: 4px 4px var(--color1), 7px 7px var(--color3);
+}
+.logo::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 10px;
+  width: 40px;
+  background-color: var(--color3);
+}
+.logo:hover {
+  -webkit-transform: rotate(-8deg) scale(1.15);
+          transform: rotate(-8deg) scale(1.15);
+  transition: 0.3s cubic-bezier(0.3, 0.2, 0, 2);
+}
+.los-links {
+  display: inline-block;
+  position: relative;
+  float: right;
+  text-transform: uppercase;
+  padding: 45px 20px;
+}
+.nav-link {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: var(--color3);
+  padding: 5px 15px 10px;
+  font-size: 15px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  transition: 0.4s ease, padding 0.3s ease;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.nav-link:hover {
+  color: var(--color4);
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 49%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 2px;
+  width: 71%;
+  background-color: var(--color4);
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.nav-link:nth-child(1)::before {
+  width: 80%;
+}
+.nav-link:nth-child(4)::before {
+  width: 76%;
+}
+.nav-link:hover::before {
+  opacity: 1;
+  bottom: 8px;
+}
+.top-center-image {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: url("https://1.bp.blogspot.com/-i3JId-IqdwQ/T2wBJRQpmwI/AAAAAAAAETc/RE7Xj6KyOpg/s1600/free%2Bdigital%2Bstamp_cute%2Bbird.png") no-repeat center;
+  background-size: cover;
+}
+
+.down-arrow {
+  position: absolute;
+  height: 45px;
+  width: 105px;
+  bottom: 60px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-animation: bob 1.1s alternate infinite ease-in-out;
+          animation: bob 1.1s alternate infinite ease-in-out;
+}
+.down-arrow::before,
+.down-arrow::after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 4px;
+  background-color: var(--color3);
+  top: 20px;
+}
+.down-arrow::before {
+  -webkit-transform: rotate(36deg);
+          transform: rotate(36deg);
+  left: 15%;
+}
+.down-arrow::after {
+  -webkit-transform: rotate(-36deg);
+          transform: rotate(-36deg);
+  left: 45.5%;
+}
+
+
+.picture-box-container {
+  min-height: 500px;
+}
+.picture-box-container.left .picture-box-text,
+.picture-box-container.right .picture-box-picture {
+  float: left;
+}
+.picture-box-container.left .picture-box-picture,
+.picture-box-container.right .picture-box-text {
+  float: right;
+}
+.picture-box-container:nth-child(1) .header {
+  font-size: 42px;
+  line-height: 50px;
+}
+.picture-box-container:nth-child(1) .picture-box-picture {
+  background: url("https://wallhalla.com/thumbs/preview/m/ME7m97ZkFxnK.jpg") no-repeat center;
+}
+.picture-box-container:nth-child(2) .picture-box-picture {
+  background: url("https://wallhalla.com/thumbs/preview/m/ME7m97ZkFxnK.jpg") no-repeat center;
+}
+.picture-box-container:nth-child(3) .picture-box-picture {
+  background: url("https://wallhalla.com/thumbs/preview/m/ME7m97ZkFxnK.jpg") no-repeat center;
+}
+.picture-box-text {
+  position: relative;
+  min-height: 500px;
+  width: 40%;
+  background-color: var(--color2);
+  overflow: hidden;
+}
+
+.text-container {
+  position: absolute;
+  width: 90%;
+  top: 48%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+.text-container span {
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 3px;
+  font-weight: 800;
+  color: var(--color3);
+}
+.header {
+  display: block;
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  font-size: 31px;
+  line-height: 42px;
+  letter-spacing: 2px;
+  font-family: "Raleway";
+  font-weight: 800;
+  transition: 0.3s ease;
+  text-shadow: 1px 1px var(--color7), 1px -1px var(--color7), -1px 1px var(--color7), -1px -1px var(--color7);
+
+}
+.header::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 8px;
+  width: 36px;
+  background-color: var(--color3);
+}
+.text {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.picture-box-picture {
+  position: relative;
+  min-height: 500px;
+  width: 60%;
+  background-size: cover !important;
+}
+.full-picture-box {
+  height: 500px;
+  background: url("https://wallhalla.com/thumbs/preview/m/ME7m97ZkFxnK.jpg") no-repeat center;
+  background-size: cover;
+  margin-top: 8%;
+}
+.bottom-section {
+  min-height: 350px;
+  background-size: 800px;
+}
+
+.bottom-section .logo {
+  top: 65px;
+  left: 40px;
+  font-size: 40px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.bottom-section .logo:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.footer-text {
+  position: absolute;
+  width: 100%;
+  max-width: 200px;
+  top: 200px;
+  left: 70px;
+  text-align: left;
+}
+.footer-text .text {
+  font-size: 13px;
+  font-weight: 800;
+  margin: 0;
+}
+
+#one {
+margin-top: 6%;
+}
+
+.content-container, #one, #three, .full-picture-box{
+border: 1px solid var(--color6);
+}
+
+#one, #three, #two, .full-picture-box {
+border-left: none;
+border-right: none;
+}
+
+
+/*-----------------------------------------------------------------SOCIALICONS*/
+.soc {
+  display: block;
+  list-style: none;
+}
+
+.soc-icons li {
+  display: inline-block;
+}
+
+.soc ul {
+  padding: 0;
+}
+
+.soc-icons a, .soc-icons svg {
+  display: block;
+  height: 32px;
+  margin: 3px;
+}
+
+.icon {
+  fill: var(--color3);
+}
+
+.icon:hover svg{
+  fill: var(--color5);
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  transition: 0.1s cubic-bezier(0.3, 0.2, 0, 2);
+}
+
+@media screen and (max-width: 960px) {
+  .nav-bar .logo {
+    left: 50%;
+    -webkit-transform: translateX(-50%) rotate(-5deg);
+            transform: translateX(-50%) rotate(-5deg);
+  }
+  .nav-bar .logo:hover {
+    -webkit-transform: translateX(-50%) rotate(-8deg) scale(1.15);
+            transform: translateX(-50%) rotate(-8deg) scale(1.15);
+    transition: 0.3s cubic-bezier(0.3, 0.2, 0, 2);
+  }
+  .los-links {
+    padding: 150px 0 15px;
+    width: 100%;
+  }
+  .top-center-image {
+    top: 64%;
+  }
+  .picture-box-text {
+    width: 100%;
+    min-height: 300px;
+  }
+  .picture-box-picture {
+    min-height: 250px;
+    width: 100%;
+  }
+  .text-container {
+    display: block;
+    position: relative;
+    margin: auto;
+    top: 0;
+    left: 0;
+    padding: 30px 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .bottom-section .logo,
+  .bottom-section .footer-text {
+    left: 50%;
+    text-align: center;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .bottom-section .logo:hover {
+    -webkit-transform: translateX(-50%) scale(1.2);
+            transform: translateX(-50%) scale(1.2);
+  }
+}
+@media screen and (max-width: 700px) {
+  .full-picture-box {
+    height: 300px;
+  }
+  .content-container {
+    margin: 50px auto 60px;
+  }
+}
+@-webkit-keyframes bob {
+  to {
+    bottom: 10px;
+  }
+}
+@keyframes bob {
+  to {
+    bottom: 10px;
+  }
+}
