@@ -278,7 +278,24 @@ a.active {
 .social li {
   float: left;
   list-style: none;
+background: var(--color6);
+border: 1px solid var(--color3);
+  transition: 0.4s ease;
 }
+
+.social li:first-child {
+border-right: none;
+}
+
+.social li:last-child {
+border-left: none;
+}
+
+.social li:hover {
+background: var(--color5);
+
+}
+
 
 .social a {
   display: block;
@@ -589,6 +606,17 @@ button:disabled {
   background: var(--color6);
   color: var(--color5);
   cursor: no-drop;
+}
+
+iframe{
+ border: solid 1px var(--color6);
+ opacity: .8;
+}
+
+iframe:hover{
+ border: solid 1px var(--color6);
+ opacity: 1;
+   transition: all .3s ease-in-out;
 }
 
 /*-------------------------------------------------------------------- blocks */
