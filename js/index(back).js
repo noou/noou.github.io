@@ -43,7 +43,7 @@
             var sections = $('section')
               , nav = $('nav')
               , nav_height = nav.outerHeight();
-                // test
+
             $(window).on('scroll', function () {
               var cur_pos = $(this).scrollTop();
               sections.each(function() {
@@ -57,13 +57,6 @@
                   nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
                 }
               });
-
-              if  ($(window).scrollTop() == $(document).height() - $(window).height())
-              {
-                   console.log('конец страницы!')
-                   nav.find('a.active').removeClass('active');
-                   nav.find('a').last().addClass('active');
-              }
             });
         },
 
@@ -141,6 +134,5 @@
       SiteModule.InputStyle();
       SiteModule.initSendMessage();
     });
-
 
 }(jQuery));
