@@ -536,8 +536,7 @@ textarea, input {
   color: var(--color2);
   font-size: 18px;
   outline: none;
-  padding: .4em;
-  margin: 1 1 5%;
+  padding: .5em;
   border-bottom: 2px solid var(--color3);
   width: 100%;
   max-width: 980px;
@@ -564,11 +563,15 @@ label {
 }
 
 input:focus~label, input.used~label {
-  top: -20px;
+  top: -22px;
   -webkit-transform: scale(.75);
   transform: scale(.75);
-  left: -2px;
+  left: 5%;
   color: #4a89dc;
+}
+
+#email:focus~label, #email.used~label {
+  opacity: 0;
 }
 
 button {
@@ -703,20 +706,18 @@ footer p {
 /* ------------------------------- tme button*/
 .tme {
   width: 40px;
+
   fill: var(--color5);
   position: fixed;
   bottom: 25px;
   right: 20px;
-  border: 1px solid var(--color5);
-  border-radius: 10%;
   -webkit-animation: tme 3s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s infinite;
   animation: tme 3s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s infinite;
 }
 
 .tme:hover {
   fill: var(--color2);
-  border-color: var(--color2);
-  background: var(--color3);
+
 }
 
 @-webkit-keyframes tme {
