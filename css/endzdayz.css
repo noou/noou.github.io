@@ -1,65 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Abel');
-
-:root {
-  --color1: #30353d;
-  --color2: Gainsboro;
-  --color3: DodgerBlue;
-  --color4: tomato;
-  --color5: rgba(255, 255, 255, 0.1);
-  --color6: rgba(0, 0, 0, 0.1);
-}
-:root {
-  --f-size: 15;
-  --f-unit: 1vmin;
-  --f: calc(var(--f-size) * var(--f-unit));
-  --bg: rgba(0, 0, 0, 0.1);
-}
-
-/*------------------------------------------------------------------------------*/
-header:after,
-nav:after,
-footer:after,
-.module-block:after,
-.gallery:after,
-.social:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  transition: 0.4s ease;
 }
-
-body {
-  overflow-x: hidden;
-  overflow-y: scroll;
-  line-height: 1.5;
-  color: var(--color2);
-  font-family: 'Abel', sans-serif;
-  background: var(--color1);
-}
-
-header, footer, article, section, nav, {
-  display: block;
-}
-
-/*------------------------------------------------------------------------------*/
-canvas {
-  display: block;
-  vertical-align: bottom;
-}
-
-#particles-js {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-}
-
 /*------------------------------------------------------------------------------*/
 #pagewrap {
   max-width: 760px;
@@ -80,6 +21,13 @@ canvas {
 /*------------------------------------------------------------------------------*/
 footer {}
 
+    footer {
+margin-top: 0;
+    }
+
+    footer h2 {
+        margin-bottom: 0;
+    }
 /*------------------------------------------------------------------------------*/
 div {
   -webkit-user-select: none;
@@ -128,8 +76,8 @@ span:after {
 }
 
 h1 {
-  padding: 1% 1% 10%;
-  font-size: 300%;
+  padding: 5% 1% 10%;
+  font-size: 3em;
   color: transparent;
   text-shadow: 0 0 8px var(--color1), 0 0 12px var(--color1), 0 0 30px var(--color3);
 }
@@ -568,134 +516,5 @@ footer p {
 
   100% {
     right: 1px;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-h1 {
-  flex: 1;
-  line-height: .75;
-  margin: auto;
-  color: var(--color3);
-  opacity: .5;
-  text-shadow: 0 0 8px var(--color1), 0 0 12px var(--color1), 0 0 30px var(--color3);
-  text-align: center;
-  transform: scaleX(var(--scale, 1));
-  animation: glitch-p 11s infinite alternate;
-}
-h1::before, h1::after {
-  --top: 0;
-  --left: 0;
-  --v-height: 30%;
-  --n-tenth: calc(var(--f-size) * .1 * var(--top));
-  --t-cut: calc(var(--n-tenth) / var(--f-size) * 100%);
-  --b-cut: calc(var(--t-cut) + var(--v-height));
-  content: attr(data-text);
-  position: absolute;
-  width: 100%;
-  left: 0;
-  text-align: center;
-  transform: translateX(calc(var(--left) * 100%));
-  filter: drop-shadow(0 0 transparent);
-  text-shadow: calc(var(--left) * -2em) 0 0.02em var(--color3), calc(var(--left) * -4em) 0 0.02em var(--color4);
-  background-color: rgba(0, 0, 0, 0.1);
-  clip-path: polygon(0% var(--t-cut), 100% var(--t-cut), 100% var(--b-cut), 0% var(--b-cut));
-}
-h1::before {
-  animation: glitch-b 1.7s infinite alternate-reverse;
-}
-h1::after {
-  animation: glitch-a 4.1s infinite alternate;
-}
-
-@keyframes glitch-p {
-  17% {
-    --scale: .87;
-  }
-  31% {
-    --scale: 1.1;
-  }
-  37% {
-    --scale: 1.2;
-  }
-  47% {
-    --scale: .91;
-  }
-  87% {
-    --scale: 1;
-  }
-}
-@keyframes glitch-a {
-  10%,30%,50%,70%,90% {
-    --top: 0;
-    --left: 0;
-  }
-  0% {
-    --v-height: 15%;
-  }
-  20% {
-    --left: .005;
-  }
-  40% {
-    --left: .01;
-    --v-height: 20%;
-    --top: 3;
-  }
-  60% {
-    --left: .03;
-    --v-height: 25%;
-    --top: 6;
-  }
-  80% {
-    --left: .07;
-    --v-height: 5%;
-    --top: 8;
-  }
-  100% {
-    --left: .083;
-    --v-height: 30%;
-    --top: 1;
-  }
-}
-@keyframes glitch-b {
-  10%,30%,50%,70%,90% {
-    --top: 0;
-    --left: 0;
-  }
-  0% {
-    --v-height: 15%;
-    --top: 10;
-  }
-  20% {
-    --left: -.005;
-  }
-  40% {
-    --left: -.01;
-    --v-height: 17%;
-    --top: 3;
-  }
-  60% {
-    --left: -.03;
-    --v-height: 35%;
-    --top: 6;
-  }
-  80% {
-    --left: -.07;
-    --v-height: 5%;
-    --top: 8;
-  }
-  100% {
-    --left: -.083;
-    --v-height: 30%;
-    --top: 1;
   }
 }
