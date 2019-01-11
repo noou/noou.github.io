@@ -19,7 +19,7 @@ body {
 	line-height: 1.6;
 	font-weight: 400;
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-	color: #222;
+	color: var(--color1);
 }
 /* Grid
 ********************************************************************* */
@@ -31,6 +31,13 @@ body {
 	padding: 0 20px;
 	box-sizing: border-box;
 }
+
+.container img{
+width: 100%;
+height: 100%;
+}
+
+
 .column, .columns {
 	width: 100%;
 	float: left;
@@ -211,10 +218,10 @@ p {
 /* Links
 ********************************************************************* */
 a {
-	color: #1EAEDB;
+	color: var(--color3);
 }
 a:hover {
-	color: #0FA0CE;
+	color: var(--color4);
 }
 /* Header Section
 ********************************************************************* */
@@ -246,7 +253,7 @@ header {
 	text-align: center;
 }
 .title .smallsep {
-	background: #fff;
+	background: var(--color2);
 	height: 2px;
 	width: 70px;
 	margin: auto;
@@ -261,10 +268,10 @@ header {
 	margin-bottom: 28px;
 	margin: 0;
 	padding: 0;
-	color: #FFFFFF;
+	color: var(--color2);
 }
 .title h2 {
-	color: #FFFFFF;
+	color: var(--color2);
 	font-size: 16px;
 	font-weight: 400;
 	text-transform: uppercase;
@@ -289,7 +296,7 @@ header {
 }
 }
 .title .icon {
-	color: #FFFFFF;
+	color: var(--color2);
 	font-size: 50px;
 }
 .main_nav {
@@ -317,7 +324,7 @@ header {
 	max-height: 400px !important;
 }
 .sticky {
-	background-color: #ffffff;
+	background-color: var(--color2);
 	opacity: 1;
 	top: 0px;
 }
@@ -368,7 +375,7 @@ nav ul a {
 	text-decoration: none;
 }
 nav ul a:hover {
-	color: #CFCFCF;
+	color: var(--color4);
 }
 .mobile-toggle {
 	display: none;
@@ -389,7 +396,7 @@ nav ul a:hover {
 	width: 30px;
 	height: 4px;
 	margin-bottom: 6px;
-	background: #000000;
+	background: var(--color3);
 	display: block;
 }
 .scroll-down {
@@ -404,8 +411,8 @@ nav ul a:hover {
 	text-shadow: 0;
 	width: 13px;
 	height: 13px;
-	border-bottom: 2px solid #fff;
-	border-right: 2px solid #fff;
+	border-bottom: 2px solid var(--color2);
+	border-right: 2px solid var(--color2);
 	z-index: 9;
 	-webkit-transform: translate(-50%, 0%) rotate(45deg);
 	-moz-transform: translate(-50%, 0%) rotate(45deg);
@@ -474,7 +481,7 @@ opacity: 0;
 ********************************************************************* */
 #skills {
 	padding: 100px 0 100px 0;
-	background-color: #F5F5F5;
+	background-color: var(--color2);
 }
 .progressBar {
 	margin-bottom: 26px;
@@ -489,7 +496,7 @@ opacity: 0;
 .progressBarContainer {
 	width: 100%;
 	height: 8px;
-	background: #E1E1E1;
+	background: var(--color2);
 	overflow: hidden;
 }
 .progressBarValue {
@@ -539,7 +546,7 @@ opacity: 0;
 	padding: 100px 0 100px 0;
 }
 .image {
-	background-color: #5a5a5a;
+	background-color: var(--color1);
 	width: 100%;
 	height: auto;
 	margin-left: auto;
@@ -557,7 +564,7 @@ opacity: 0;
 /* Testimonial Section
 ********************************************************************* */
 #testimonial {
-	background-color: #F5F5F5;
+	background-color: var(--color2);
 	padding: 100px 0 100px 0;
 }
 .quoteLoop {
@@ -581,8 +588,8 @@ opacity: 0;
 input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], textarea, select {
 	height: 38px;
 	padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
-	background-color: #F5F5F5;
-	border: none;
+	background-color: var(--color6);
+	border: solid 1px 
 	box-shadow: none;
 	box-sizing: border-box;
 	border-radius: 0;
@@ -632,7 +639,7 @@ footer p {
 }
 .socialIcons {
 	font-size: 34px;
-	color: rgba(255, 255, 255, 0.7);
+	color: var(--color2);
 }
 /* Lists
 ********************************************************************* */
