@@ -28,7 +28,7 @@ body {
 	width: 100%;
 	max-width: 960px;
 	margin: 0 auto;
-	padding: 0 20px;
+	padding: 0 1%;
 	box-sizing: border-box;
 }
 
@@ -562,11 +562,13 @@ pre, dl, figure, table, p, ul, ol, form {
 	width: 65.3333333333%;
 }
 .nine.columns {
-	width: 74.0%;
+	width: 50%;
+  float: left;
 }
 
 .ten.columns {
-	width: 82.6666666667%;
+	width: 50%;
+  float: right;
 }
 .eleven.columns {
 	width: 91.3333333333%;
