@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+:root {
+    --color1: #30353d;
+    --color2: Gainsboro;
+    --color3: DodgerBlue;
+    --color4: tomato;
+    --color5: rgba(255, 255, 255, 0.1);
+    --color6: rgba(0, 0, 0, 0.1);
+}
+
+header:after,
+nav:after,
+footer:after,
+.module-block:after,
+.gallery:after,
+.social:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: 0.4s ease;
+}
+
+body {
+
+    line-height: 1.5;
+    color: var(--color2);
+    font-family: 'Comfortaa', Courier, 'Times New Roman';
+    background: #323840;
+}
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------ SETTINGS */
+/*----------------------------------------------------------------------------------------*/
+header, footer, article, section, nav, {
+    display: block;
+}
+
+#txtleft {
+    text-align: left;
+}
+
+#txtright {
+    text-align: right;
+}
+
+/*--------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------ HEADER */
+/*--------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------ CONTENT */
+/*---------------------------------------------------------------------------------------*/
+.page-wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.module-block {
+
+        padding: 10% 5% 10% 5%;
+    border: 1px solid var(--color6);
+}
+
+.columns {
+    display: inline-block;
+    text-align: center;
+}
+
+.column {
+    display: inline-block;
+    width: 33.33333333%;
+    padding: 10px;
+    float: left;
+}
+
+/*-------------------------------------------------------------------- block1 */
+#block1 {
+    margin-top: 10%;
+}
+
+#block1 .column {
+    width: 49%;
+}
+
+/*-------------------------------------------------------------------- block2 */
+#block2 {
+background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+
+#block2 .columns {
+    width: 49%;
+}
+
+#block2 .column {
+    width: 49%;
+        vertical-align:bottom;
+}
+
+#block2 ul {
+}
+
+#block2 li {
+    display: inline-block;
+    font-size: 1.8em;
+}
+/*-------------------------------------------------------------------- block3 */
+#block3 .columns {
+margin-bottom: 10%;
+}
+
+/*-------------------------------------------------------------------- block3 */
+#block4 .column {
+    width: 24.333333%;
+    float: none;
+}
+
+
+/*-------------------------------------------------------------------- block4 */
+#block2 img, #block4 img {
+    width: 100%;
+}
+
+
+/*-------------------------------------------------------------------- block5 */
+#block5 {
+background-color: rgba(0, 0, 0, 0.1);
+}
+
+#block5 img {
+    width: 60%;
+}
+
+#block5 .column {
+    width: 100%;
+}
+
+/*-------------------------------------------------------------------- block6 */
+#block6 .columns {
+    width: 100%;
+    text-align: left;
+}
+
+#block6 .column {
+    width: 49%;
+    padding: 0;
+}
+
+#block6 .column:last-child {
+    float: right;
+}
+
+#block6 textarea {
+    width: 100%;
+    height: 250px;
+}
+
+#block6 input {
+    width: 100%;
+    height: 2.3em;
+
+}
+
+textarea, input {
+  background-color: transparent;
+  border: none;
+  color: var(--color2);
+  font-size: 18px;
+  outline: none;
+  padding: .5em;
+  background-color: var(--color6);
+  border: 1px solid var(--color6);
+  border-bottom: 2px solid var(--color3);
+  width: 100%;
+  max-width: 980px;
+  resize: none;
+}
+
+textarea {
+  background-color: var(--color6);
+}
+
+
+#block6 .button {
+    width: 10%;
+    float: right;
+    background-color: var(--color3);
+      border: 1px solid var(--color6);
+}
+
+#block6 .button:hover {
+    background-color: var(--color4);
+}
+
+/*--------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------ FOOTER */
+/*--------------------------------------------------------------------------------------*/
+#footer {
+    width: 100%;
+        margin-top: 5%;
+        font-size: 1em;
+}
+
+#footer .column {
+    width: 30%;
+    float: none;
+}
+
+#footer .column:last-child {
+
+        font-size: 2em;
+
+}
+
+/*--------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------Media Queries */
+/*--------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------ 980 */
+@media screen and (max-width: 980px) {
+    .column {
+        width: 50%;
+    }
+
+    .column:last-child {
+        width: 100%;
+    }
+
+    #block2 .column {
+        width: 100%;
+    }
+
+    #block4 .column {
+        width: 32.333333%;
+    }
+}
+
+/* ------------------------------------------------------------------------------ 767 */
+@media screen and (max-width: 767px) {
+    .page-wrap {
+        margin-top: 5%;
+    }
+}
+
+/* ------------------------------------------------------------------------------ 680 */
+@media screen and (max-width: 680px) {
+    .page-wrap {
+        margin-top: 8%;
+    }
+
+    #block1 .column {
+        width: 100%;
+    }
+
+    #block4 .column {
+        width: 48.333333%;
+    }
+}
+
+/* ------------------------------------------------------------------------------ 520 */
+@media screen and (max-width: 520px) {
+    #block3 .column {
+        width: 100%;
+    }
+}
+
+/* ------------------------------------------------------------------------------ 490 */
+@media screen and (max-width: 490px) {
+    .page-wrap {
+        margin-top: 15%;
+    }
+
+    #block2 .columns, #block4 .column {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+h1 {
+    padding: 3% 0 0 1%;
+        font-size: 1.8em;
+        border-bottom: .2em solid var(--color3);
+margin-bottom: 5%;
+}
+
+
+.typcn{
+    color: var(--color2);
+}
+.typcn:hover{
+    color: var(--color4);
+}
+
+
+
+
+
+
+
+
+
+/* ------------------------------- skillbar*/
+.skillbar {
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
+    width: 100%;
+    background: var(--color6);
+    height: 35px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -webkit-transition: 0.4s linear;
+    -moz-transition: 0.4s linear;
+    -ms-transition: 0.4s linear;
+    -o-transition: 0.4s linear;
+    transition: 0.4s linear;
+    -webkit-transition-property: width, background-color;
+    -moz-transition-property: width, background-color;
+    -ms-transition-property: width, background-color;
+    -o-transition-property: width, background-color;
+    transition-property: width, background-color;
+}
+
+
+.skillbar-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: bold;
+    font-size: 13px;
+    color: var(--color3);
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.skillbar-title span {
+    display: block;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+    height: 35px;
+    line-height: 35px;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.skillbar-bar {
+    height: 35px;
+    width: 0px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background: var(--color6);
+}
+
+.skill-bar-percent {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 11px;
+    height: 35px;
+    line-height: 35px;
+    color: var(--color3);
+}
