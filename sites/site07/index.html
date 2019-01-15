@@ -8,18 +8,54 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.8/typicons.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
 
+
+    <div class="page-wrap">
+
+    <header id="header">
+      <input type="checkbox" id="xBxHack" />
+      <nav id="mainNav" class="mainNav">
+      	<div class="container">
+      		<div class="logo"><a href="#"><img src="logo.svg" alt="logo.svg" title="Привет дружище!"></a></div>
+      		<label class="navBars" for="xBxHack">
+      			<i class="fa fa-bars"></i>
+      		</label>
+      		<ul id="menu" class="menu">
+      			<li><a class="active" href="#block1">block1</a></li>
+      			<li><a href="#block2">block2</a></li>
+      			<li><a href="#block3">block3</a></li>
+      			<li><a href="#block4">block4</a></li>
+      			<li><a href="#block5">block5</a></li>
+      			<li><a href="#block6">block6</a></li>
+      		</ul>
+      	</div>
+      </nav>
     </header>
 
 
-    <section class="page-wrap">
 
+
+
+
+
+
+
+
+
+
+
+
+
+        <section id="one">
         <section id="block1" class="module-block">
             <h1>BLOCK#1</h1>
             <p style="margin: 5% 1% 5% 1%;text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ratione architecto necessitatibus cum praesentium dolor totam voluptatibus recusandae? Illo quod nemo ratione itaque dolores laudantium error vero laborum blanditiis nostrum.</p>
@@ -51,8 +87,9 @@
             </section>
 
         </section>
+        </section>
 
-
+<section id="one" class="dark">
         <section id="block2" class="module-block">
             <h1>BLOCK#2</h1>
             <p style="margin: 5% 1% 5% 1%;text-align: center;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
@@ -106,9 +143,9 @@
             </section>
 
         </section>
+    </section>
 
-
-
+<section id="one">
         <section id="block3" class="module-block">
             <h1>BLOCK#3</h1>
             <section class="columns">
@@ -159,9 +196,9 @@
                 <div class="skill-bar-percent">99%</div>
             </div>
         </section>
+    </section>
 
-
-
+<section id="one">
         <section id="block4" class="module-block">
             <h1>BLOCK#4</h1>
             <section class="columns">
@@ -175,16 +212,18 @@
                 <div class="column"><img src="empty.png" class="image" alt="Work One" /></div>
             </section>
         </section>
-
+<section id="one" class="dark">
         <section id="block5" class="module-block">
             <section class="columns">
-                <div class="column"><img src="empty.png" class="image" alt="Work One" /></div>
+                <div class="column"><img src="logo.svg" class="image" alt="Work One" /></div>
                 <div class="column">
                     <p>Illo quod nemo ratione itaque dolores laudantium error vero laborum blanditiis nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ratione architecto cum praesentium voluptatibus recusandae?</p>
                 </div>
             </section>
         </section>
+    </section>
 
+    <section id="one">
         <section id="block6" class="module-block">
             <h1>BLOCK6</h1>
             <section class="columns">
@@ -210,14 +249,14 @@
 
             </section>
         </section>
+    </section>
 
 
-
-    </section><!-- page-wrap -->
+    </div><!-- page-wrap -->
     <footer>
         <div class="columns" id="footer">
             <div class="column">
-                <p>Created with love by Jeff.</p>
+                <p>Created with love.</p>
             </div>
             <div class="column">
                 <span class="typcn typcn-social-facebook-circular socialIcons"></span>
@@ -229,10 +268,9 @@
     </footer>
 
 
-
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-    <script src="js/index.js"></script>
-
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js'></script>
+    <script src="index.js"></script>
 
 </body>
 
