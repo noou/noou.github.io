@@ -1,20 +1,14 @@
 $(function() {
     var wrap = $(".mainNav");
+    var wraplogo = $(".mainNav .logo");
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
-        if (scroll >= 50) wrap.addClass("sticky");
-        else wrap.removeClass("sticky");
+        if (scroll >= 50) wrap.addClass("sticky"), wraplogo.addClass("imgafter");
+        else wrap.removeClass("sticky"), wraplogo.removeClass("imgafter");
     });
 });
 
-$(function() {
-    var wrap = $(".mainNav .logo");
-    $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
-        if (scroll >= 50) wrap.addClass("imgafter");
-        else wrap.removeClass("imgafter");
-    });
-});
+
 
 
 $(document).ready(function() {
