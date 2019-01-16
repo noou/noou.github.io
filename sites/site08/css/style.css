@@ -1,6 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+:root {
+  --color1: #30353d;
+  --color2: Gainsboro;
+  --color3: DodgerBlue;
+  --color4: tomato;
+  --color5: rgba(255, 255, 255, 0.1);
+  --color6: rgba(0, 0, 0, 0.1);
+}
+
+header:after,
+nav:after,
+.module-block:after,
+.gallery:after,
+.social:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: 0.4s ease;
 }
+
 
 a {
   text-decoration: none;
@@ -8,7 +35,8 @@ a {
 }
 
 body {
-  font-family: "Merriweather", serif;
+    color: var(--color1);
+    font-family: 'Comfortaa', Courier, 'Times New Roman';
   font-size: 16px;
   line-height: 1.5;
 }
@@ -18,18 +46,16 @@ body {
   position: relative;
   height: auto;
   padding-bottom: 80px;
-  background: #4f2f60 url("https://miguelquispe.com/pen//hero.jpg") center top no-repeat;
-  background-size: cover;
-  color: #fff;
+  color: var(--color2);
   overflow: hidden;
+  background: var(--color1);
 }
 .hero h1 {
   margin: 50px 0 20px;
-  font-family: "Montserrat", sans-serif;
   font-size: 35px;
 }
 .hero h1 span {
-  font: 700 60px/1 "Dancing Script", cursive;
+
   display: block;
 }
 .hero h2 {
@@ -63,9 +89,7 @@ body {
 }
 .section__title {
   font-size: 24px;
-  color: #3b3b58;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
   margin: 14px 0;
 }
 .section__intro {
@@ -79,11 +103,6 @@ body {
     margin-right: 15%;
   }
 }
-.section--cta {
-  color: #454545;
-  background: #f1f1f1;
-}
-
 .box {
   display: flex;
   flex: 1 0 100%;
@@ -96,13 +115,11 @@ body {
   justify-content: space-between;
 }
 .box__title {
-  font-family: "Montserrat", sans-serif;
 }
 .box__more {
-  color: #ff4e5c;
+  color: var(--color4);
 }
 .box__content {
-  color: #454545;
   text-align: center;
   padding: 20px;
 }
@@ -124,7 +141,6 @@ body {
 
 .btn {
   color: #fff;
-  font-family: "Montserrat", sans-serif;
   text-align: center;
   display: block;
   margin: 0 auto;
