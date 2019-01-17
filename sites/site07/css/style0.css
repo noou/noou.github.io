@@ -112,14 +112,13 @@ header, footer, article, section, nav, {
 #block2 {}
 
 #block2 .columns {
-  width: 100%;
+  width: 49%;
+  opacity: .9;
 }
 
 #block2 .column {
-    width: 24%;
-    vertical-align: bottom;
-    float: none;
-      opacity: .9;
+  width: 49%;
+  vertical-align: bottom;
 }
 
 #block2 ul {}
@@ -257,7 +256,7 @@ textarea {
   }
 
   #block2 .column {
-    width: 49%;
+    width: 100%;
   }
 
   #block4 .column {
@@ -537,9 +536,6 @@ header {
   }
   #block6 .button {
     width: 35%;
-  }
-  #block2 .column {
-    width: 100%;
   }
 }
 

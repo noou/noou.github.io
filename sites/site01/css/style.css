@@ -228,6 +228,14 @@ font-weight: 900;
     background: url("../img/empty.png") no-repeat center;
 }
 
+.picture-box-picture{
+    opacity: .5;
+}
+.picture-box-picture:hover{
+    opacity: 1;
+}
+
+
 .picture-box-text {
     position: relative;
     min-height: 500px;
