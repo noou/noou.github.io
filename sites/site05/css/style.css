@@ -1,24 +1,44 @@
-:root {
-  --clr1: Gainsboro;
-  --clr2: #efefef;
-  --clr3: #30353d;
-  --clr4: tomato;
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
 
+:root {
+  --color1: #30353d;
+  --color2: Gainsboro;
+  --color3: DodgerBlue;
+  --color4: tomato;
+  --color5: rgba(255, 255, 255, 0.1);
+  --color6: rgba(0, 0, 0, 0.1);
+}
+
+header:after,
+nav:after,
+footer:after,
+.module-block:after,
+.gallery:after,
+.social:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: 0.4s ease;
 }
 
 body {
-  background: var(--clr1);
-  color: var(--clr3);
-  padding: 50px 0 0 0;
-  margin: 0 10px;
-}
-body *, body :after, body :before {
-  box-sizing: border-box;
+  color: var(--color2);
+  font-family: 'Comfortaa', Courier, 'Times New Roman';
+  display: -webkit-box;
+  background: #323840;
 }
 
 .transparent {
   background: transparent !important;
-  padding: 5% 25%;
+  padding: 30% 10% 10% 10%;
   text-align: center;
 }
 
@@ -27,10 +47,7 @@ body *, body :after, body :before {
   min-width: 360px;
   margin: 0 auto;
   position: relative;
-}
-.wrap.sticky {
-  margin-top: 150px;
-  /* set height from header */
+  margin-bottom: 5%;
 }
 
 .fluid .wrap {
@@ -38,61 +55,94 @@ body *, body :after, body :before {
 }
 
 header {
-  background: var(--clr2);
-  padding: 50px;
+  background: var(--color6);
+  padding: 2%;
+  max-width: 960px;
   width: 100%;
-  position: relative;
+  position: fixed;
   z-index: 99;
+  border: 1px solid var(--color6);
 }
 
 .wrap.sticky header {
-  background: var(--clr2);
-  padding: 50px;
-  position: fixed;
-  top: 0px;
-  max-width: 960px;
-  width: calc(100% - 20px);
-  min-width: 360px;
-}
-
-.fluid .wrap.sticky header {
-  max-width: 100% !important;
+  background: var(--color1);
+  padding: .5%;
 }
 
 header .logo {
-  background: var(--clr4);
-  width: 50px;
-  height: 50px;
+  background: var(--color6);
+  width: 90px;
+  height: 90px;
+  ;
   border-radius: 50em;
+  float: left;
 }
+
+.logo img {
+  width: 100%;
+  background: var(--color6);
+}
+
+footer .logo img {
+  width: 100%;
+  background: transparent;
+}
+
 header nav {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translate(-50px, -50%);
+  float: right;
+  padding: 1%;
+  width: 40%;
 }
+
 header nav ul li {
   display: inline-block;
   list-style: none;
-  width: 60px;
-  height: 10px;
-  background: var(--clr3);
+  padding: 4%;
+  background: var(--color6);
+  border: 1px solid var(--color6);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color2);
+}
+
+a:hover {
+  color: var(--color1);
+}
+
+header li:hover {
+  background: var(--color4);
+  color: var(--color1);
 }
 
 section {
-  background: var(--clr2);
+  background: var(--color6);
   padding: 100px 50px;
   width: 100%;
   position: relative;
   margin: 10px 0 0 0;
 }
 
+.contentbox {
+  border: 1px solid var(--color6);
+}
+
 section .button {
   display: block;
   margin: 20px auto 0 auto;
-  max-width: 120px;
-  height: 35px;
-  background: var(--clr4);
+  max-width: 35%;
+  background: var(--color3);
+  border: 1px solid var(--color6);
+  padding: 2%;
+  text-decoration: none;
+  color: var(--color2);
+  text-align: center;
+}
+
+.button:hover {
+  background: var(--color4);
+  color: var(--color1);
 }
 
 section.cards {
@@ -101,48 +151,63 @@ section.cards {
   display: block;
   text-align: center;
 }
+
 section.cards .card {
-        background: var(--clr2);
-        width: 30%;
-        padding: 1;
-        margin: 1% 0 1% 0;
-        display: inline-block;
-        text-align: center;
+  background: var(--color6);
+  width: 30%;
+  border: 1px solid var(--color6);
+  margin: 1% 0 1% 0;
+  display: inline-block;
+  text-align: center;
 }
 
 section.cards .card .content {
-padding: 3% 1% 15%;
+  padding: 3% 1% 15%;
 }
+
 section.cards .card img {
   width: 100%;
   height: auto;
+  border-bottom: 1px solid var(--color6);
 }
 
 footer {
-  background: var(--clr3);
+  background: var(--color1);
   padding: 50px;
   width: 100%;
   position: relative;
   margin: 10px 0 0 0;
+  border: 1px solid var(--color6);
 }
+
 footer .logo {
-  background: var(--clr2);
-  width: 50px;
-  height: 50px;
+  background: var(--color6);
+  width: 70px;
+  height: 70px;
   border-radius: 50em;
+  opacity: .4;
 }
+
+footer .logo:hover {
+  background: var(--color2);
+  opacity: 1;
+}
+
 footer nav {
   position: absolute;
   right: 0;
   top: 50%;
   transform: translate(-50px, -50%);
 }
+
 footer nav ul li {
   display: inline-block;
   list-style: none;
-  width: 60px;
-  height: 10px;
-  background: var(--clr2);
+  font-size: 2.2em;
+}
+
+footer nav ul li:hover {
+  color: var(--color4);
 }
 
 @media (max-width: 728px) {

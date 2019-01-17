@@ -116,7 +116,7 @@ header, footer, article, section, nav, {
 }
 
 #block2 .column {
-    width: 24%;
+    width: 23%;
     vertical-align: bottom;
     float: none;
       opacity: .9;
@@ -130,7 +130,7 @@ header, footer, article, section, nav, {
 }
 
 #block2 .column:hover {
-  background: var(--color5);
+  background: var(--color6);
   opacity: 1;
   border-bottom-style: inset;
      border-bottom-color: var(--color4);
