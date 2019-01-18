@@ -27,6 +27,9 @@ footer:after,
   padding: 0;
 }
 
+
+
+
 body {
   font-family: "Century Gothic", 'Lato', sans-serif;
   background: var(--color1);
@@ -49,6 +52,13 @@ a {
   text-align: center;
   padding: 0 2em;
 }
+
+.content {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+
 .et-hero-tabs h1,
 .et-slide h1 {
   font-size: 2rem;
@@ -117,4 +127,216 @@ a {
   .et-hero-tab {
     font-size: 1rem;
   }
+}
+
+
+
+
+
+
+
+
+
+header {
+  position: relative;
+  height: 30vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c6d9d3;
+}
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+header .overlay h1 {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 9rem;
+  text-shadow: 25px -15px rgba(25, 42, 46, 0.04);
+  color: #142124;
+  mix-blend-mode: overlay;
+}
+header .overlay h1 span {
+  padding-top: 0.5em;
+  display: block;
+  letter-spacing: 5px;
+  font-size: 1.25rem;
+}
+header .parallax {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+header .parallax div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: 50% 90%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+header .parallax .one {
+  background-image: url("https://sam.beckham.io/images/articles/firewatch/layer_6.png");
+  z-index: 6;
+}
+header .parallax .two {
+  background-image: url("https://sam.beckham.io/images/articles/firewatch/layer_5.png");
+  z-index: 5;
+}
+header .parallax .three {
+  background-image: url("https://sam.beckham.io/images/articles/firewatch/layer_4.png");
+  z-index: 4;
+}
+header .parallax .four {
+  background-image: url("https://sam.beckham.io/images/articles/firewatch/layer_3.png");
+  z-index: 3;
+}
+header .parallax .five {
+  background-image: url("https://sam.beckham.io/images/articles/firewatch/layer_2.png");
+  z-index: 2;
+}
+
+header .parallax .six {
+  background-image: url("https://sam.beckham.io/images/articles/firewatch/layer_1.png");
+  z-index: 1;
+}
+
+header .parallax .seven {
+  background-image: url("https://sam.beckham.io/images/articles/firewatch/layer_0.png");
+  z-index: 0;
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: flex;
+  min-height: 15vh;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  background-color: #192a2e;
+  color: #c6d9d3;
+}
+footer a {
+  padding-bottom: .25em;
+  text-decoration: none;
+  border-bottom: 1px dashed #c6d9d3;
+  color: #c6d9d3;
+}
+
+
+
+
+main {
+  position: relative;
+  margin-bottom: 15vh;
+  min-height: 85vh;
+}
+
+
+
+
+
+
+
+.cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards li {
+  border: 1px solid var(--color6);
+  border-radius:5px;
+  background-color: var(--color6);
+  flex: 1 1 200px;
+}
+
+.cards h2 {
+  background-color: var(--color3);
+  margin: 0;
+  padding: 10px;
+}
+
+.cards p {
+  padding: 10px;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.flex li {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  /*grid-template-columns: repeat(auto-fill, minmax(200px 1fr));*/
+  grid-gap: 20px;
+}
+
+
+
+
+
+/*--------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------Media Queries */
+/*--------------------------------------------------------------------------------------------*/
+/* --------------------------------------------- 980 */
+@media screen and (max-width: 980px) {
+    header .overlay h1 {
+      top: 15%;
+          font-size: 8rem;
+    }
+}
+/* --------------------------------------------- 767 */
+@media screen and (max-width: 767px) {
+    header .overlay h1 {
+      top: 20%;
+      font-size: 6rem;
+    }
+}
+
+/* --------------------------------------------- 680 */
+@media screen and (max-width: 680px) {
+    header .overlay h1 {
+      top: 20%;
+      font-size: 4rem;
+    }
+}
+
+/* --------------------------------------------- 520 */
+@media screen and (max-width: 520px) {
+    header .overlay h1 {
+      font-size: 3rem;
+    }
+}
+
+/* --------------------------------------------- 490 */
+@media screen and (max-width: 490px) {
+    header .overlay h1 {
+      font-size: 2rem;
+    }
 }
