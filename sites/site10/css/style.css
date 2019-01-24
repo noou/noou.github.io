@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+:root {
+  --color1: #30353d;
+  --color2: Gainsboro;
+  --color3: DodgerBlue;
+  --color4: tomato;
+  --color5: rgba(255, 255, 255, 0.1);
+  --color6: rgba(0, 0, 0, 0.1);
+}
+
+header:after,
+nav:after,
+footer:after,
+.module-block:after,
+.gallery:after,
+.social:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  line-height: 1.5;
+  color: var(--color2);
+  background: var(--color1);
+  font-family: 'Comfortaa', Courier, 'Times New Roman';
+}
+
+
+main {
+  position: relative;
+  margin-bottom: 15vh;
+  min-height: 85vh;
+}
+
+.block {
+    width: 100%;
+    background: var(--color1);
+}
+
+
+.left {
+float: left;
+}
+.right {
+float: right;
+}
+/*=======================================================
+      SETTINGS
+========================================================*/
+section {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.position-center-center {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.headblock .position-center-center {
+    margin-top: 30px;
+    width: 100%;
+}
+
+#particles-js {
+    width: 100%;
+    background: var(--color1);
+}
+
+/*=======================================================
+      HEADER
+========================================================*/
+header {
+    width: 100%;
+    z-index: 999;
+    background: var(--color1);
+    padding: 15px 0;
+    position: fixed;
+}
+
+#header {
+    max-width: 970px;
+    margin: 0 auto;
+}
+
+header .logo {
+    float: left;
+    position: relative;
+    max-width: 30%;
+}
+
+header .navbar {
+    display: inline-block;
+    border: none;
+    margin: 0px;
+    position: static;
+    padding: 0px;
+    border-radius: 0px;
+    text-align: center;
+    float: right;
+}
+
+header .navbar li {
+    display: inline-block;
+    float: left;
+    margin: 0 5px;
+    position: relative;
+}
+
+
+
+/*=======================================================
+      CONTENT
+========================================================*/
+#content{
+    max-width: 970px;
+        margin: 8% auto;
+        border: 1px solid var(--color6);
+        text-align: center;
+}
+
+.column {
+        /* position: relative; */
+        display: inline-block;
+        vertical-align: middle;
+        width: 100%;
+        border: 1px solid var(--color2);
+        min-height: 8em;
+        padding: 2%;
+}
+
+.column:first-child {
+            /* margin-left: 0%; */
+}
+
+.column:last-child {
+            /* margin-right: 0%; */
+}
+
+.row {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+
+
+
+#b100 {
+        width: 100%;
+}
+
+#b50 {
+        width: 50%;
+}
+#b30 {
+        width: 33.33%;
+}
+
+#b20 {
+        width: 25%;
+}
+
+#b10 {
+
+width: 16.66%;
+}
+/*=======================================================
+      FOOTER
+========================================================*/
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  min-height: 15vh;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  background: var(--color6);
+}
+/*=======================================================
+      BUTTONS
+========================================================*/
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: red;
+    position: relative;
+    z-index: 1;
+}
+
+/*=======================================================
+      MEDIA
+========================================================*/
+
+/* --------------------------------------------- 980 */
+@media screen and (max-width: 980px) {
+
+}
+
+/* --------------------------------------------- 767 */
+@media screen and (max-width: 767px) {
+
+}
+
+/* --------------------------------------------- 680 */
+@media screen and (max-width: 680px) {
+
+}
+
+/* --------------------------------------------- 520 */
+@media screen and (max-width: 520px) {
+
+}
+
+/* --------------------------------------------- 490 */
+@media screen and (max-width: 490px) {
+
+  }
+}
