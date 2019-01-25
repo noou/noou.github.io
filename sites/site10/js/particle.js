@@ -106,7 +106,7 @@ particlesJS("particles-js", {
 var count_particles, stats, update;
 stats = new Stats;
 stats.setMode(0);
-stats.domElement.style.position = 'absolute';
+stats.domElement.style.position = 'fixed';
 stats.domElement.style.left = '0px';
 stats.domElement.style.top = '0px';
 document.body.appendChild(stats.domElement);
