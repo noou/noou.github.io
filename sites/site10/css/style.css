@@ -4,6 +4,7 @@
   --color1: #30353d;
   --color2: Gainsboro;
   --color3: DodgerBlue;
+    --color3-1: CORNFLOWERBLUE;
   --color4: tomato;
   --color5: rgba(255, 255, 255, 0.1);
   --color6: rgba(0, 0, 0, 0.1);
@@ -121,8 +122,6 @@ section {
   background: none;
   overflow: hidden;
   transition: all 0.3s;
-  padding-bottom: 6px;
-  border-color: var(--color1);
 
 }
 
@@ -138,7 +137,6 @@ section {
   background-color: var(--color1);
   opacity: 1;
   top: 0px;
-  border-bottom: 1px solid var(--color6);
 }
 
 .logo {
@@ -482,4 +480,59 @@ footer {
   overflow: hidden;
   border: 1px solid var(--color6);
 
+}
+
+
+.tab {
+  overflow: hidden;
+  border: 1px solid var(--color6);
+  background-color: var(--color6);
+  display: flex;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+ width: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: var(--color3);
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: var(--color3);
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid var(--color6);
+  border-top: none;
+}
+
+
+
+
+.progress-container {
+  width: 100%;
+  height: 0.3em;
+  background: var(--color6);
+  margin-top: 2%;
+}
+
+.progress-bar {
+  height: 0.3em;
+  background: var(--color3);
+  opacity: .5;
+  width: 0%;
 }
