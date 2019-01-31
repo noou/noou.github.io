@@ -95,6 +95,7 @@ $('.chevron').click(function(event) {
     }, 500);
     event.preventDefault();
 });
+
 // ###################################################################################
 // #### SCROLL UP
 $(window).scroll(function () {

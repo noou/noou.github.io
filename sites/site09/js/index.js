@@ -8,19 +8,19 @@ var switchTab = function() {
 	var i  = p.index();
 	var s = section.eq(i);
 	var c = s.find('*');
-	
+
 	section.removeClass('active');
 	sectionContent.removeAttr('style');
 	s.addClass('active');
-	
+
 	c.css({
 		transform: 'none',
 		opacity: 1
 	});
-	
+
 	linkParent.removeClass('active');
 	p.addClass('active');
-	
+
 	return false;
 };
 
