@@ -417,6 +417,10 @@ background: var(--color6);
         width: 100%;
 }
 
+#b75 {
+        width: 75%;
+}
+
 #b50 {
         width: 50%;
 }
@@ -427,6 +431,11 @@ background: var(--color6);
 
 #b30 {
         width: 33.33%;
+}
+
+
+#b25 {
+        width: 25%;
 }
 
 #b20 {
@@ -512,8 +521,11 @@ footer {
     #b20 {
         width: 33.33%;
     }
-    #b20:last-child {
+    #b25, #b75, #b20:last-child {
         width: 100%;
+    }
+    form{
+        text-align: left;
     }
     #block01 > #content > .row {
         flex-wrap: wrap-reverse;
@@ -1029,7 +1041,9 @@ opacity: 0;
 
 
 
-
+#content h1 {
+    padding: 10% 0 5%;
+}
 
 
 .ttl::after {
@@ -1042,7 +1056,6 @@ opacity: 0;
   background: -moz-linear-gradient(-45deg, var(--color4) 0%, var(--color3) 100%);
   background: -webkit-linear-gradient(-45deg, var(--color4) 0%, var(--color3) 100%);
   background: linear-gradient(135deg, var(--color4) 0%, var(--color3) 100%);
-  margin-bottom: 5%;
 }
 
 .txtleft{
@@ -1101,4 +1114,61 @@ body {
     position: absolute;
     width: 100%;
     opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+form > .row:last-child{
+    justify-content: flex-end;
+}
+
+
+
+
+/* Style inputs, select elements and textareas */
+input[type=text], select, textarea{
+  width: 100%;
+padding: 1.7%;
+  border: 1px solid var(--color6);
+  box-sizing: border-box;
+  resize: vertical;
+  background-color: var(--color6);
+  resize: none;
+  color: var(--color2);
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+/* Style the submit button */
+input[type=submit] {
+
 }
