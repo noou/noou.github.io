@@ -123,6 +123,7 @@ section {
     position: fixed;
     background-image: linear-gradient(150deg, var(--color1), var(--color6));
     /* background: gray; */
+      box-shadow: -5px -5px 20px 0px black;
 }
 .headerlogo {
     width: 20%;
@@ -130,8 +131,7 @@ section {
     justify-content: center;
     align-items: center;
     z-index: 99;
-    background: var(--color1);
-    /* background: gray; */
+
 }
 
 .navimage {
@@ -254,6 +254,7 @@ nav ul a.active {
     display: none;
     bottom: 20px;
     right: 10px;
+        z-index: 999;
 }
 
 @keyframes scroll {
@@ -496,10 +497,15 @@ footer {
     color: #fff;
     text-transform: uppercase;
     font-weight: 600;
-    background: red;
+    background: var(--color3);
     position: relative;
     z-index: 1;
 }
+
+.btn:hover {
+    background: var(--color4);
+}
+
 
 /*=======================================================
       MEDIA
@@ -842,6 +848,7 @@ q {font-style: italic;}
   width: 100%;
   overflow: hidden;
   /* background-color: #201c29; */
+
 }
 .headercontainer::before, .headercontainer::after {
   position: absolute;
@@ -851,6 +858,7 @@ q {font-style: italic;}
   border-radius: 54% 46% 42% 58% / 60% 58% 42% 40%;
   background-image: linear-gradient(45deg, var(--color3), var(--color6));
   animation: vawe 5s linear infinite;
+
 }
 .headercontainer::before {
   top: -10%;
