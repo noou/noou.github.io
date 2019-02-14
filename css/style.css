@@ -22,6 +22,15 @@ footer:after,
   visibility: hidden;
 }
 
+
+button:active, button:focus {
+  outline: none;
+}
+button::-moz-focus-inner {
+  border: 0;
+}
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -599,14 +608,32 @@ input:focus~label, input.used~label {
 }
 
 button {
-  font-size: 19px;
-  position: relative;
   background-color: var(--color3);
-  cursor: pointer;
-  border: none;
   color: var(--color2);
   /* padding: 2%; */
   /* width: 100%; */
+  font-size: .875rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  border-style: none;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-appearance: button;
+  text-transform: none;
+  overflow: visible;
+  line-height: 1.15;
+  margin: 0;
+  will-change: transform;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  transition: -webkit-transform .25s ease-out;
+  transition: transform .25s ease-out;
+  transition: transform .25s ease-out,-webkit-transform .25s ease-out;
 }
 
 button:disabled {
@@ -614,6 +641,16 @@ button:disabled {
   color: var(--color5);
   cursor: no-drop;
 }
+
+button:disabled:hover {
+    background: var(--color6);
+}
+
+
+button:hover {
+    background: var(--color4);
+  }
+
 
 iframe{
  border: solid 1px var(--color6);
