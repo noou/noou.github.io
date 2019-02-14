@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/fonts.css">
 
     <script type="text/javascript">
@@ -61,6 +60,7 @@
     <section class="page-wrap">
 
         <section id="block1" class="module-block">
+            <div class="dots"><span></span><span></span><span></span><span></span><span></span><span></span></div>
             <h2 id="Posthead"><span class="icon-ico-nav01"></span>INFO</h2>
             <div class="column" class="left" id="logo">
                 <img src="img/loading.svg" alt="logo.svg" title="sapere aude.">
@@ -244,31 +244,6 @@
     </footer>
 
 
-    <button data-custom-open="modal-1" role="button">Demo Modal</button>
-
-
-
-    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
-      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-          <div class="modal__header">
-            <h2 class="modal__title" id="modal-1-title">
-              Micromodal
-            </h2>
-            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-        </div>
-          <div class="modal__content" id="modal-1-content">
-            <p>
-              Try hitting the <code>tab</code> key and notice how the focus stays within the modal itself. Also, <code>esc</code> to close modal.
-            </p>
-        </div>
-          <div class="modal__footer">
-            <button class="modal__btn modal__btn-primary">Continue</button>
-            <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
-        </div>
-        </div>
-      </div>
-    </div>
 
 
 
@@ -276,31 +251,11 @@
         <span class="icon-ico-telegram icosocalt"></span>
     </a>
 
-
-
-    <script src='dist/jquery.min.js'></script> <!-- 3.2.1 -->
-    <script src="dist/particles.min.js"></script> <!-- 2.0.0 -->
-    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="js/index.js"></script>
-    <script src="js/modal.js"></script>
     <script src="js/particle.js"></script>
-    <script>
-        // Initial config for setting up modals
-        MicroModal.init({
-            openTrigger: 'data-custom-open',
-            disableScroll: false,
-            awaitCloseAnimation: true
-        });
-        // MicroModal.init({
-        //   onShow: modal => console.info(`${modal.id} is shown`), // [1]
-        //   onClose: modal => console.info(`${modal.id} is hidden`), // [2]
-        //   openTrigger: 'data-custom-open', // [3]
-        //   closeTrigger: 'data-custom-close', // [4]
-        //   disableScroll: true, // [5]
-        //   disableFocus: false, // [6]
-        //   awaitCloseAnimation: true, // [7]
-        //   debugMode: true // [8]
-        // });
-    </script>
+
+
 </body>
 </html>
