@@ -164,48 +164,6 @@ footer p {
     font-size: 110%;
 }
 
-
-
-/*------------------------------------------------------------------------------*/
-
-
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--color1);
-  /* change if the mask should have another color then white */
-  z-index: 99999;
-  /* makes sure it stays on top */
-}
-
-#status {
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  left: 50%;
-  /* centers the loading animation horizontally one the screen */
-  top: 50%;
-  /* centers the loading animation vertically one the screen */
-  /* background-image: url(../img/loading.svg); */
-  /* path to your loading animation */
-  background-repeat: no-repeat;
-  background-position: center;
-  margin: -100px 0 0 -100px;
-  /* is width and height divided by two */
-}
-
-#status img{
-    z-index: 99999;
-    display: block;
-    position: absolute;
-    width: 100%;
-    opacity: 1;
-}
-
-
 /*------------------------------------------------------------------------------*/
 
 
@@ -224,7 +182,7 @@ footer p {
     left: calc(-1 * var(--gap-horizontal));
     width: calc(100% + var(--gap-horizontal) * 2);
     height: calc(100% + var(--gap-vertical) * 2);
-    background: url(../img/endzdayz.png) no-repeat 50% 0;
+    background: url(../img/img1.jpg) no-repeat 50% 0;
     opacity: 0;
     background-color: var(--blend-color-1);
     background-size: cover;
