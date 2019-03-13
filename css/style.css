@@ -314,7 +314,7 @@ background: var(--color5);
 }
 
 #block2 p {
-  text-align: justify;
+  text-align: center;
   color: var(--color2);
 }
 
@@ -361,6 +361,7 @@ font-size: 12em;
   -moz-column-width: 8.3em;
   -webkit-column-width: 8.3em;
   column-width: 8.3em;
+      text-align: center;
 }
 
 .columnsalt ul {
