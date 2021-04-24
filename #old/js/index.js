@@ -1,5 +1,3 @@
-
-
 (function($){
     var SiteModule = {
 
@@ -132,8 +130,6 @@
                 alert("Ваше сообщение отправленно ✉️");
             });
         }
-
-
     };
 
     $(document).ready(function() {
