@@ -307,3 +307,42 @@ document.addEventListener('DOMContentLoaded', randomImg);
     const observer = new MutationObserver(setMapSkinByTheme);
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 })();
+
+// --- Современное бургер-меню ---
+document.addEventListener('DOMContentLoaded', function() {
+  const burger = document.querySelector('.burger');
+  const menu = document.getElementById('main-menu');
+  function openMenu() {
+    burger.classList.add('open');
+    menu.classList.add('open');
+    menu.hidden = false;
+    burger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMenu() {
+    burger.classList.remove('open');
+    menu.classList.remove('open');
+    menu.hidden = true;
+    burger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+  burger.addEventListener('click', function(e) {
+    if (menu.classList.contains('open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+  // Закрытие по ESC
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && menu.classList.contains('open')) {
+      closeMenu();
+    }
+  });
+  // Закрытие по клику вне меню
+  document.addEventListener('click', function(e) {
+    if (menu.classList.contains('open') && !menu.contains(e.target) && !burger.contains(e.target)) {
+      closeMenu();
+    }
+  });
+});

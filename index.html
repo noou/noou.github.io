@@ -140,25 +140,26 @@
 
     <header>
         <nav id="navigation-menu" class="nav">
-
-            <label class="theme-switch" for="checkbox">
-                <input type="checkbox" id="checkbox" />
-                <div class="slider round"></div>
-            </label>
-
-
-            <div class="menu-trigger"><span></span></div>
-            <ul id="items" class="top-menu">
+            <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-menu">
+                <svg width="32" height="32" viewBox="0 0 32 32">
+                    <rect y="7" width="32" height="3" rx="1.5" />
+                    <rect y="15" width="32" height="3" rx="1.5" />
+                    <rect y="23" width="32" height="3" rx="1.5" />
+                </svg>
+            </button>
+            <ul id="main-menu" class="top-menu" hidden>
                 <li><a class="active" href="#block1">block1</a></li>
                 <li><a href="#block2">block2</a></li>
                 <li><a href="#block3">block3</a></li>
                 <li><a href="#block4">block4</a></li>
                 <li><a href="#block5">block5</a></li>
             </ul>
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
         </nav>
     </header>
-
-
 
     <section class="page-wrap">
 

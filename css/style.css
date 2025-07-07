@@ -135,6 +135,57 @@ canvas {
 
 
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10002;
+  background: var(--color1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+nav.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4em;
+  position: relative;
+  padding: 0 1.5em;
+}
+
+.burger {
+  position: static;
+  margin-left: 0;
+  margin-right: 1em;
+}
+
+.theme-switch {
+  margin-left: 1em;
+}
+
+.page-wrap {
+  margin-top: 4.5em;
+}
+
+.burger svg rect {
+  fill: var(--color3);
+  transition: .3s;
+  transform-origin: 16px 16px;
+}
+
+.burger.open rect:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.burger.open rect:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.open rect:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
 header nav {
   width: 100%;
   background-color: var(--color1);
@@ -142,6 +193,7 @@ header nav {
   z-index: 2;
   height: 4em;
   box-shadow: -2px 2px 6px var(--color8);
+  position: relative;
 }
 
 header ul {
@@ -172,87 +224,94 @@ a.active {
 
 /*------------------------------------------------------------------------- BURGER BUTTON */
 
-.menu-trigger {
-  display: none;
-}
-
-.menu-trigger {
-  width: 35px;
-  height: 32px;
-  margin: auto;
-  cursor: pointer;
-  position: relative;
-}
-
-.menu-trigger:before,
-.menu-trigger span,
-.menu-trigger:after {
-  width: 100%;
-  height: 4px;
-  display: block;
-  background: var(--color3);
-  border-radius: 2px;
+.burger {
   position: absolute;
-  opacity: 1;
+  top: 10px;
+  right: 10px;
+  z-index: 10001;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.menu-trigger:before,
-.menu-trigger:after {
-  transition: top .35s cubic-bezier(.23, 1, .32, 1), transform .35s cubic-bezier(.23, 1, .32, 1), opacity .35s cubic-bezier(.23, 1, .32, 1), background-color 1.15s cubic-bezier(.86, 0, .07, 1);
-  -webkit-transition: top .35s cubic-bezier(.23, 1, .32, 1), -webkit-transform .35s cubic-bezier(.23, 1, .32, 1), opacity .35s cubic-bezier(.23, 1, .32, 1), background-color 1.15s cubic-bezier(.86, 0, .07, 1);
-  content: "";
+.burger svg rect {
+  fill: var(--color3);
+  transition: .3s;
 }
 
-.menu-trigger:before {
-  top: 4px;
+.burger.open rect:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
 }
 
-.menu-trigger span {
-  top: 15px;
-}
-
-.menu-trigger:after {
-  top: 26px;
-}
-
-/* Hover */
-.menu-trigger:hover:before {
-  top: 7px;
-}
-
-.menu-trigger:hover:after {
-  top: 23px;
-}
-
-/* Click */
-.menu-trigger.cross span {
+.burger.open rect:nth-child(2) {
   opacity: 0;
 }
 
-.menu-trigger.cross:before,
-.menu-trigger.cross:after {
-  top: 40%;
+.burger.open rect:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
-.menu-trigger.cross:before {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=5);
-  /*for IE*/
+.top-menu {
+  position: fixed;
+  top: 0; right: 0;
+  width: 220px;
+  height: 100vh;
+  background: var(--color1);
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  padding: 60px 20px 20px 20px;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  transform: translateX(100%);
+  transition: transform .3s cubic-bezier(.4,0,.2,1);
+  z-index: 10000;
 }
 
-.menu-trigger.cross:after {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=-5);
-  /*for IE*/
+.top-menu.open {
+  transform: translateX(0);
 }
 
-.menu-trigger:focus {
-  outline: none;
+.top-menu li a {
+  font-size: 1.2em;
+  color: var(--color3);
+  text-decoration: none;
+  transition: color .2s;
 }
 
+.top-menu li a:hover {
+  color: var(--color4);
+}
 
+@media (min-width: 900px) {
+  .burger { display: none; }
+  .top-menu {
+    position: static;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    transform: none;
+    gap: 2em;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+  }
+  .top-menu li a { font-size: 1em; }
+  .theme-switch {
+    position: static;
+    margin-left: auto;
+  }
+}
 
 /*---------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------ CONTENT */
