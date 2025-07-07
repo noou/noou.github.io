@@ -1,8 +1,18 @@
-$(window).on('load', function() { // makes sure the whole site is loaded
-  $('#status').fadeOut(); // will first fade out the loading animation
-  $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
-  $('body').delay(350).css({'overflow':'visible'});
-})
+window.addEventListener('load', function() {
+  const status = document.getElementById('status');
+  const preloader = document.getElementById('preloader');
+  if (status) status.style.transition = 'opacity 0.5s';
+  if (preloader) preloader.style.transition = 'opacity 0.5s';
+  if (status) status.style.opacity = 0;
+  setTimeout(() => {
+    if (status) status.style.display = 'none';
+    if (preloader) preloader.style.opacity = 0;
+    setTimeout(() => {
+      if (preloader) preloader.style.display = 'none';
+      document.body.style.overflow = 'visible';
+    }, 350);
+  }, 350);
+});
 
 /*!
  * imagesLoaded PACKAGED v4.1.3

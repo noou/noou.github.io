@@ -1039,6 +1039,13 @@ input:checked+.slider:before {
   cursor: default;
 }
 
+/* Добавлено: прокрутка текста в модальных окнах */
+.modal-content {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 1rem;
+  scroll-behavior: smooth;
+}
 
 /*--------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------Media Queries */
