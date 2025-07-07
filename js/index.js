@@ -265,27 +265,46 @@ window.addEventListener('load', function() {
 // Случайная смена логотипа
 function randomImg() {
   let imgAr = [
-      '<img src="img/logos/logo01.svg" alt="logo.svg" title="Привет дружище!" onClick="randomImg();">',
-      '<img src="img/logos/logo02.svg" alt="logo.svg" title="Выйди из бесконечного цикла бессмысленных перерождений и зайди как положено." onClick="randomImg();">',
-      '<img src="img/logos/logo03.svg" alt="logo.svg" title="Ты страдаешь, следовательно ты существуешь." onClick="randomImg();">',
-      '<img src="img/logos/logo04.svg" alt="logo.svg" title="Всё полезно, что в экзистенциальную дыру пролезло." onClick="randomImg();">',
-      '<img src="img/logos/logo05.svg" alt="logo.svg" title="Сильная привязанность к люстре убивает." onClick="randomImg();">',
-      '<img src="img/logos/logo06.svg" alt="logo.svg" title="После встречи с дном, начинай копать." onClick="randomImg();">',
-      '<img src="img/logos/logo07.svg" alt="logo.svg" title="Если обвести труп цветными мелками, то создастся атмосфера праздника." onClick="randomImg();">',
-      '<img src="img/logos/logo08.svg" alt="logo.svg" title="Ваш тлен напрасен, мир прекрасен, хоть и порой весьма ужасен!" onClick="randomImg();">',
-      '<img src="img/logos/logo09.svg" alt="logo.svg" title="Artichokes play football. Purple monkeys dance invisibly." onClick="randomImg();">',
-      '<img src="img/logos/logo10.svg" alt="logo.svg" title="А ты знаешь, в чем соль, %username%?" onClick="randomImg();">',
-      '<img src="img/logos/logo11.svg" alt="logo.svg" title="Вообще—то я не религиозный человек, но если ты есть там наверху, спаси меня, пожалуйста." onClick="randomImg();">',
-      '<img src="img/logos/logo12.svg" alt="logo.svg" title="Шоколад ни в чем не виноват!" onClick="randomImg();">',
-      '<img src="img/logos/logo13.svg" alt="logo.svg" title="У вас есть такая проблема, что дерьмо прилипает к шерсти?" onClick="randomImg();">',
-      '<img src="img/logos/logo14.svg" alt="logo.svg" title="Прислушивайтесь к голосам в вашей голове..." onClick="randomImg();">',
-      '<img src="img/logos/logo15.svg" alt="logo.svg" title="Все что вы сдесь видете, далжно оставатся сикретам :0" onClick="randomImg();">',
-      '<img src="img/logos/logo16.svg" alt="logo.svg" title="Cпасибо, что зашли :3" onClick="randomImg();">'
+    {src: 'img/logos/logo01.svg', title: 'Привет дружище!'},
+    {src: 'img/logos/logo02.svg', title: 'Выйди из бесконечного цикла бессмысленных перерождений и зайди как положено.'},
+    {src: 'img/logos/logo03.svg', title: 'Ты страдаешь, следовательно ты существуешь.'},
+    {src: 'img/logos/logo04.svg', title: 'Всё полезно, что в экзистенциальную дыру пролезло.'},
+    {src: 'img/logos/logo05.svg', title: 'Сильная привязанность к люстре убивает.'},
+    {src: 'img/logos/logo06.svg', title: 'После встречи с дном, начинай копать.'},
+    {src: 'img/logos/logo07.svg', title: 'Если обвести труп цветными мелками, то создастся атмосфера праздника.'},
+    {src: 'img/logos/logo08.svg', title: 'Ваш тлен напрасен, мир прекрасен, хоть и порой весьма ужасен!'},
+    {src: 'img/logos/logo09.svg', title: 'Artichokes play football. Purple monkeys dance invisibly.'},
+    {src: 'img/logos/logo10.svg', title: 'А ты знаешь, в чем соль, %username%?'},
+    {src: 'img/logos/logo11.svg', title: 'Вообще—то я не религиозный человек, но если ты есть там наверху, спаси меня, пожалуйста.'},
+    {src: 'img/logos/logo12.svg', title: 'Шоколад ни в чем не виноват!'},
+    {src: 'img/logos/logo13.svg', title: 'У вас есть такая проблема, что дерьмо прилипает к шерсти?'},
+    {src: 'img/logos/logo14.svg', title: 'Прислушивайтесь к голосам в вашей голове...'},
+    {src: 'img/logos/logo15.svg', title: 'Все что вы сдесь видете, далжно оставатся сикретам :0'},
+    {src: 'img/logos/logo16.svg', title: 'Cпасибо, что зашли :3'}
   ];
   let rnd = Math.floor(Math.random() * imgAr.length);
   let rndImg = imgAr[rnd];
   let imgTag = document.getElementById('logo');
-  if (imgTag) imgTag.innerHTML = rndImg;
+  if (!imgTag) return;
+  // Получаем текущую картинку для сохранения размеров
+  const oldImg = imgTag.querySelector('img');
+  let width = oldImg ? oldImg.width : 120;
+  let height = oldImg ? oldImg.height : 120;
+  // Показываем лоадер
+  imgTag.innerHTML = `<img src="img/loading.svg" alt="loading..." style="width:${width}px;height:${height}px;object-fit:contain;">`;
+  // Создаём новый объект Image
+  const newImg = new window.Image();
+  newImg.src = rndImg.src;
+  newImg.alt = 'logo.svg';
+  newImg.title = rndImg.title;
+  newImg.style.width = width + 'px';
+  newImg.style.height = height + 'px';
+  newImg.style.objectFit = 'contain';
+  newImg.onclick = randomImg;
+  newImg.onload = function() {
+    imgTag.innerHTML = '';
+    imgTag.appendChild(newImg);
+  };
 }
 document.addEventListener('DOMContentLoaded', randomImg);
 
