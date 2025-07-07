@@ -375,3 +375,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+function syncThemeSwitcher() {
+  const themeSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+  if (!themeSwitch) return;
+  const currentTheme = localStorage.getItem('theme');
+  if (currentTheme === 'dark') {
+    themeSwitch.checked = true;
+  } else {
+    themeSwitch.checked = false;
+  }
+}
+window.addEventListener('DOMContentLoaded', syncThemeSwitcher);
+window.addEventListener('pageshow', syncThemeSwitcher);
