@@ -263,6 +263,14 @@ window.addEventListener('load', function() {
 });
 
 // Случайная смена логотипа
+let username = localStorage.getItem('username');
+function getUsername() {
+  if (!username) {
+    username = prompt('Введите ваше имя:', 'Гость') || 'Гость';
+    localStorage.setItem('username', username);
+  }
+  return username;
+}
 function randomImg() {
   let imgAr = [
     {src: 'img/logos/logo01.svg', title: 'Привет дружище!'},
@@ -304,6 +312,8 @@ function randomImg() {
   newImg.onload = function() {
     imgTag.innerHTML = '';
     imgTag.appendChild(newImg);
+    // Выводим в консоль username :: title
+    console.log(`username :: ${rndImg.title}`);
   };
 }
 document.addEventListener('DOMContentLoaded', randomImg);

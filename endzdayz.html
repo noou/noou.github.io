@@ -1,116 +1,179 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-
+<html lang="ru">
 <head>
-	<meta charset="utf-8">
-
-	<title>endzdayz</title>
-	<meta name="author" content="nj" />
-	<meta name="description" content="All this is absolutely useless ♥" />
-	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
-	<meta name="keywords" content="glitch, horror, depression" />
-
-	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="css/colors.css">
-	<link rel="stylesheet" href="css/fonts.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/style1.css">
-
-	<link rel="stylesheet" href="css/endzdayz.css">
-	<link rel="stylesheet" type="text/css" href="css/style2.css" />
-	<link rel="shortcut icon" href="img/icons/endzdayz.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <title>EndzDayz Countdown</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: var(--color1);
+    }
+    .edz-header {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 1.2em 2em 0.5em 2em;
+      box-sizing: border-box;
+    }
+    .edz-timer-wrap {
+      flex: 1 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 60vh;
+    }
+    .edz-timer-block {
+      background: var(--color6);
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      padding: 2.5em 4em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 320px;
+      max-width: 90vw;
+      margin-bottom: 2em;
+      transition: padding .3s, min-width .3s;
+    }
+    .edz-timer-title {
+      font-size: 2.2em;
+      font-weight: 700;
+      margin-bottom: 1.2em;
+      color: var(--color3);
+      text-align: center;
+    }
+    .edz-timer {
+      display: flex;
+      gap: 2.5em;
+      justify-content: center;
+      align-items: center;
+    }
+    .edz-timer-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 2.5em;
+      font-weight: 600;
+      color: var(--color4);
+    }
+    .edz-timer-label {
+      font-size: 0.7em;
+      color: var(--color7);
+      margin-top: 0.3em;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+    }
+    @media (max-width: 900px) {
+      .edz-timer-block {
+        padding: 2em 1.5em;
+        min-width: 220px;
+      }
+      .edz-timer-title {
+        font-size: 1.5em;
+      }
+      .edz-timer {
+        gap: 1.2em;
+      }
+      .edz-timer-item {
+        font-size: 1.5em;
+      }
+    }
+    @media (max-width: 600px) {
+      .edz-header {
+        padding: 0.7em 0.7em 0.5em 0.7em;
+      }
+      .edz-timer-block {
+        padding: 1.2em 0.5em;
+        min-width: 120px;
+      }
+      .edz-timer-title {
+        font-size: 1.1em;
+      }
+      .edz-timer {
+        gap: 0.5em;
+      }
+      .edz-timer-item {
+        font-size: 1em;
+      }
+    }
+    .edz-footer {
+      width: 100%;
+      text-align: center;
+      color: var(--color7);
+      font-size: 1.1em;
+      padding: 1.5em 0 1em 0;
+      letter-spacing: 0.03em;
+      flex-shrink: 0;
+    }
+  </style>
 </head>
-
-<audio autoplay>
-    <source src="https://raw.githubusercontent.com/noou/random/master/sadtheme.mp3" type="audio/mp3">
-</audio>
-
 <body>
-
-	<div id="preloader">
-      <div id="status"><img src="img/loading.svg" alt="loading..."></div>
-    </div>
-
-	<main>
-		<div class="content">
-			<div id="particles-js"></div>
-
-			<div class="glitch">
-				<div class="glitch__img"></div>
-				<div class="glitch__img"></div>
-				<div class="glitch__img"></div>
-				<div class="glitch__img"></div>
-				<div class="glitch__img"></div>
-			</div>
-			<div id="page" class="content__title timer">
-				<header>
-					<h1 data-text="J ENDZ DAYZ">J ENDZ DAYZ</h1>
-				</header>
-				<section id="content">
-					<div class="timer" style="padding-top: 3%;">
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-				</section>
-				<footer>
-					<hr>
-					<section id="footext">
-						<h2>...</h2>
-						<p>All this is absolutely useless. ♥</p>
-					</section>
-				</footer>
-
-			</div>
-		</div>
-	</main>
-
-	<script type="text/javascript">
-		var s = document.getElementsByTagName('span');
-		var oneDay = 24 * 60 * 60 * 1000;
-		var firstDate = new Date("august 23, 2042 00:00:00");
-		var secondDate = new Date();
-		var days = (firstDate.getTime() - secondDate.getTime()) / (oneDay);
-		var hrs = (days - Math.floor(days)) * 24;
-		var min = (hrs - Math.floor(hrs)) * 60;
-		s[0].innerHTML = Math.floor(days);
-		s[1].innerHTML = Math.floor(hrs);
-		s[2].innerHTML = Math.floor(min);
-		s[3].innerHTML = Math.floor((min - Math.floor(min)) * 60);
-		var i = setInterval(function() {
-			n()
-		}, 1000)
-
-		function f(d, x) {
-			s[d].innerHTML = x;
-			s[d - 1].innerHTML = Number(s[d - 1].innerHTML) - 1;
-		}
-
-		function n() {
-			s[3].innerHTML = Number(s[3].innerHTML) - 1;
-			if (s[3].innerHTML == -1) {
-				f(3, 59)
-				if (s[2].innerHTML == -1) {
-					f(2, 59)
-					if (s[1].innerHTML == -1) {
-						f(1, 23)
-					}
-				}
-			}
-			if (s[0].innerHTML <= -1) {
-				clearInterval(i);
-				document.getElementsByTagName('div')[0].innerHTML = '<h2>The event is over.</h2>'
-			}
-		}
-	</script>
-
-	<script src='dist/jquery.min.js'></script> <!-- 3.2.1 -->
-    <script src="dist/particles.min.js"></script> <!-- 2.0.0 -->
-
-	<script src="js/particle.js"></script>
-	<script src="js/endzdayz.js"></script>
-
+  <header class="edz-header">
+    <label class="theme-switch" for="edz-theme-checkbox">
+      <input type="checkbox" id="edz-theme-checkbox" />
+      <div class="slider round"></div>
+    </label>
+  </header>
+  <main class="edz-timer-wrap">
+    <section class="edz-timer-block">
+      <div class="edz-timer-title">До события осталось:</div>
+      <div class="edz-timer" id="edz-timer">
+        <div class="edz-timer-item"><span id="edz-days">0</span><span class="edz-timer-label">дней</span></div>
+        <div class="edz-timer-item"><span id="edz-hours">0</span><span class="edz-timer-label">часов</span></div>
+        <div class="edz-timer-item"><span id="edz-mins">0</span><span class="edz-timer-label">минут</span></div>
+        <div class="edz-timer-item"><span id="edz-secs">0</span><span class="edz-timer-label">секунд</span></div>
+      </div>
+    </section>
+  </main>
+  <footer class="edz-footer">
+    Всё это абсолютно бесполезно. ♥
+  </footer>
+  <script>
+    // Настройка даты события:
+    const eventDate = new Date('August 23, 2042 00:00:00');
+    function updateTimer() {
+      const now = new Date();
+      let diff = eventDate - now;
+      if (diff < 0) diff = 0;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const mins = Math.floor((diff / (1000 * 60)) % 60);
+      const secs = Math.floor((diff / 1000) % 60);
+      document.getElementById('edz-days').textContent = days;
+      document.getElementById('edz-hours').textContent = hours;
+      document.getElementById('edz-mins').textContent = mins;
+      document.getElementById('edz-secs').textContent = secs;
+    }
+    updateTimer();
+    setInterval(updateTimer, 1000);
+    // Переключение темы (использует ту же логику, что и на основном сайте)
+    const themeSwitch = document.getElementById('edz-theme-checkbox');
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme) {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+      if (currentTheme === 'dark') {
+        themeSwitch.checked = true;
+      }
+    }
+    themeSwitch.addEventListener('change', function(e) {
+      if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
+  <script src="js/particle.js"></script>
+  <script src="js/index.js"></script>
 </body>
-
 </html>
