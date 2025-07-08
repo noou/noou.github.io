@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/deviant-gallery.css">
     <script>
       // Мгновенное применение темы до загрузки стилей
       (function(){
@@ -175,6 +176,37 @@
         </div>
     </div>
 
+    <div class="modal" id="modal5">
+        <div class="modal-dialog">
+            <header class="modal-header">
+                DeviantArt - Галерея
+                <button class="close-modal" aria-label="close modal" data-close>
+                    ✕
+                </button>
+            </header>
+            <section class="modal-content">
+                <p><strong>Нажмите ✕, ESC или кликните вне модального окна для закрытия</strong></p>
+                <p>Добро пожаловать в мою галерею DeviantArt!</p>
+                <p>Здесь вы найдёте мои цифровые работы, иллюстрации и другие творческие проекты.</p>
+                <ul>
+                    <li>Цифровое искусство</li>
+                    <li>Иллюстрации</li>
+                    <li>Концепт-арт</li>
+                    <li>Экспериментальные работы</li>
+                </ul>
+                <p>Буду рад вашим комментариям и обратной связи!</p>
+                <div id="deviant-gallery" class="gallery-grid"></div>
+                <div id="gallery-lightbox" class="gallery-lightbox" style="display:none;">
+                  <span class="gallery-lightbox-close">✕</span>
+                  <img src="" alt="artwork" id="gallery-lightbox-img">
+                </div>
+            </section>
+            <footer class="modal-footer">
+                <a href="https://deviantart.com" target="_blank" class="global-button">Перейти на DeviantArt</a>
+            </footer>
+        </div>
+    </div>
+
     <header>
         <label class="theme-switch" for="checkbox">
             <input type="checkbox" id="checkbox" />
@@ -222,10 +254,10 @@
 
         <section id="block2" class="module-block">
             <section class="columns">
-                <div class="column"><a href="#" target="_blank">
+                <div class="column"><a class="open-modal" data-open="modal5" href="#">
                         <span class="icon-ico-block-deviant ico icoblock" id="ico icoblock"></span>
-                        <h2>LOREM</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                        <h2>DeviantArt</h2>
+                        <p>Мои работы и галерея на DeviantArt.</p>
                     </a></div>
                 <div class="column"><a href="#" target="_blank">
                         <span class="icon-ico-block-googledisk ico icoblock" id="ico icoblock"></span>
@@ -395,7 +427,7 @@
     <script src="dist/particles.min.js"></script> <!-- 2.0.0 -->
     <script src="js/index.js"></script>
     <script src="js/particle.js"></script>
-
+    <script src="js/deviant-gallery.js"></script>
 </body>
 
 </html>
