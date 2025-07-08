@@ -342,12 +342,14 @@ document.addEventListener('DOMContentLoaded', randomImg);
 document.addEventListener('DOMContentLoaded', function() {
   const burger = document.querySelector('.burger');
   const menu = document.getElementById('main-menu');
+  const overlay = document.querySelector('.menu-overlay');
   function openMenu() {
     burger.classList.add('open');
     menu.classList.add('open');
     menu.hidden = false;
     burger.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
+    if (overlay) overlay.classList.add('open');
   }
   function closeMenu() {
     burger.classList.remove('open');
@@ -355,6 +357,7 @@ document.addEventListener('DOMContentLoaded', function() {
     menu.hidden = true;
     burger.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
+    if (overlay) overlay.classList.remove('open');
   }
   burger.addEventListener('click', function(e) {
     if (menu.classList.contains('open')) {
@@ -369,9 +372,9 @@ document.addEventListener('DOMContentLoaded', function() {
       closeMenu();
     }
   });
-  // Закрытие по клику вне меню
+  // Закрытие по клику вне меню или по overlay
   document.addEventListener('click', function(e) {
-    if (menu.classList.contains('open') && !menu.contains(e.target) && !burger.contains(e.target)) {
+    if (menu.classList.contains('open') && (overlay && e.target === overlay || (!menu.contains(e.target) && !burger.contains(e.target)))) {
       closeMenu();
     }
   });

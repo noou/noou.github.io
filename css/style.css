@@ -79,8 +79,7 @@ header,
 footer,
 article,
 section,
-nav,
-  {
+nav {
   display: block;
 }
 
@@ -1332,4 +1331,19 @@ input:checked+.slider:before {
   #block1 h2 {
     padding: 10% 15% 5%;
   }
+}
+
+/* ===== Overlay для бургер-меню ===== */
+.menu-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.menu-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
 }
