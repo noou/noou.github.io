@@ -899,7 +899,6 @@ hr {
 footer {
   padding: 40px;
   position: relative;
-  margin-top: 5%;
 }
 
 footer h2 {
@@ -1154,7 +1153,7 @@ input:checked+.slider:before {
 .modal-content {
   max-height: 60vh;
   overflow-y: auto;
-  padding-right: 1rem;
+  padding: 3rem;
   scroll-behavior: smooth;
   scrollbar-width: auto;
   -ms-overflow-style: auto;
