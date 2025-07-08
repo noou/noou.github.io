@@ -223,7 +223,8 @@
     const closeEls = document.querySelectorAll("[data-close]");
     const isVisible = "is-visible";
     for (const el of openEls) {
-      el.addEventListener("click", function() {
+      el.addEventListener("click", function(event) {
+        event.preventDefault(); // предотвращаем прокрутку вверх
         const modalId = this.dataset.open;
         document.getElementById(modalId).classList.add(isVisible);
       });
