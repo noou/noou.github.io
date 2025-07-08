@@ -234,3 +234,10 @@ body.dark .show-more-btn:hover, body.dark .theme-toggle-btn:hover {
   background: var(--btn-hover);
   color: Gainsboro;
 }
+
+.about p {
+  border-left: 6px solid var(--accent);
+  padding-left: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
