@@ -70,6 +70,9 @@ ul {
 li {
   margin-bottom: 0.4rem;
 }
+li[data-popup] {
+  position: relative;
+}
 .label {
   font-weight: bold;
   margin-bottom: 0.2rem;
@@ -253,4 +256,17 @@ a {
 }
 a:visited {
   color: tomato;
+}
+
+#popup-tooltip {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+  background: rgba(0,0,0,0.1);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
