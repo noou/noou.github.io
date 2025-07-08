@@ -38,11 +38,13 @@ body {
 .container {
   max-width: 900px;
   margin: auto;
-  background: var(--container-bg);
-  padding: 2rem;
+  background: rgba(0, 0, 0, 0.1);
+padding: .5rem 1rem 1rem;
   border-radius: 12px;
   box-shadow: var(--shadow);
   position: relative;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 h1 {
   font-size: 2rem;
@@ -115,17 +117,16 @@ li {
 
 .contact {
   position: fixed;
-  right: 2rem;
-  bottom: 2rem;
+    right: 1rem;
+    bottom: 1rem;
   width: 260px;
   background: var(--btn-bg);
   border-radius: 8px;
-  box-shadow: 0 2px 8px var(--border);
   padding: 1rem 1.2rem;
   font-size: 0.98rem;
   z-index: 100;
   color: var(--main-text);
-  border: 1px solid var(--border);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 900px) {
   .contact {
@@ -138,6 +139,14 @@ li {
     border: none;
   }
 }
+
+
+
+.contact a:hover {
+    color: var(--danger);
+    text-decoration: none;
+}
+
 
 .skills-list {
   font-size: 0.95em;
@@ -167,6 +176,7 @@ li {
 }
 .more-skills {
   margin-top: 0.5em;
+  padding-left: 6%;
 }
 
 .theme-toggle-btn {
@@ -210,11 +220,7 @@ li {
 body.dark h1, body.dark h2, body.dark .label {
   color: Gainsboro;
 }
-body.dark .contact {
-  background: var(--btn-bg);
-  color: Gainsboro;
-  border: 1px solid var(--border);
-}
+
 body.dark .skills-list {
   color: Gainsboro;
 }
@@ -240,4 +246,11 @@ body.dark .show-more-btn:hover, body.dark .theme-toggle-btn:hover {
   padding-left: 1em;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
+}
+
+a {
+  color: DodgerBlue;
+}
+a:visited {
+  color: tomato;
 }
